@@ -5,11 +5,13 @@
     margin: 0
     padding: 0
     box-sizing: border-box
+    transition: all 0.2s ease
 
 .container
     max-width: 1200px
     padding: 0 15px
     margin: 0 auto
+
 .hero
     background-image: url("../img/hero_img.jpg")
     background-position: center
@@ -47,6 +49,32 @@
             width: 500px
             height: 60px
             background-color: #ffffff
+            border: none
+            color: #999999
+            font-family: "Josefin Sans"
+            font-size: 14px
+            font-weight: 400
+            line-height: 26px
+            text-align: center
+            letter-spacing: 2.8px
+        .btn_search
+            width: 150px
+            height: 60px
+            border: 2px solid #ffffff
+            background-color: #5474fd
+            color: #ffffff
+            font-family: Aleo
+            font-size: 14px
+            font-weight: 300
+            line-height: 26px
+            text-align: center
+            text-transform: uppercase
+            letter-spacing: 1.4px
+        .btn_search:hover
+            cursor: pointer
+            background-color: #ffffff
+            color: #e9780f
+
     &__scroll
         text-align: center
         padding-bottom: 230px
@@ -58,16 +86,19 @@
             font-weight: 300
             line-height: 26px
             letter-spacing: 2.8px
+        a:hover 
+            color: #e9780f
         img
+            width: 10px
             margin: 0 auto
-
+        
 .header
     background-color: #5474fd
 
 .heder-content
     display: flex
     justify-content: space-between
-    padding: 28px 0 32px 0
+    padding: 28px 0 35px 0
     a
         text-decoration: none
         color: #ffffff
@@ -78,11 +109,13 @@
         text-align: left
         text-transform: uppercase
         letter-spacing: 2.4px
+    a:hover
+        color: #e9780f
     .header-menu
         display: flex
         list-style: none
         li:not(:last-child)
-            padding-right: 42px
+            margin-right: 42px
         a
             color: #ffffff
             font-family: Aleo
@@ -92,6 +125,9 @@
             text-align: left
             text-transform: uppercase
             letter-spacing: normal
+        a:hover 
+            border-bottom: 1px solid #e9780f
+            color: #e9780f 
 
 .why-choose-us
     background-image: url("../img/why.jpg")
@@ -126,10 +162,11 @@
             letter-spacing: 1.6px
             margin-bottom: 40px
     .why-foto
-        // width: 50%
+        display: flex
+        flex-direction: column
         &__img_1
             padding-top: 100px
-            // padding-right: 150px
+            padding-right: 150px
         &__img_2
             padding-left: 200px
             padding-top: 5px
@@ -262,13 +299,75 @@
         font-family: Aleo
         font-size: 36px
         font-weight: 400
-        font-style: normal
-        letter-spacing: normal
         line-height: 26px
         text-align: center
         padding-top: 120px
+        margin-bottom: 100px
     .what-content
+        padding-bottom: 150px
         display: flex
+        &__descr
+            background-color: #333333
+            padding: 50px 60px
+            h4
+                color: #fefefe
+                font-family: "Josefin Sans"
+                font-size: 20px
+                font-weight: 300
+                line-height: 26px
+                text-align: left
+                text-transform: uppercase
+                margin-bottom: 33px
+            blockquote
+                text-indent: 30px
+                color: #e8e8e8
+                font-family: "Josefin Sans"
+                font-size: 16px
+                font-weight: 300
+                line-height: 26px
+                text-align: left
+            span
+                color: #5474fd
+                font-size: 20px
+
+.footer
+    background-color: #232323
+    .footer-wrap
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        h2
+            padding-top: 120px
+            color: #ffffff
+            font-family: "Josefin Sans"
+            font-size: 24px
+            font-weight: 400
+            line-height: 26px
+            text-transform: uppercase
+            letter-spacing: 4.5px
+            margin-bottom: 15px
+        p 
+            color: #ffffff
+            font-family: "Josefin Sans"
+            font-size: 16px
+            font-weight: 300
+            font-style: normal
+            letter-spacing: normal
+            line-height: 26px
+            letter-spacing: 1.6px
+            margin-bottom: 30px
+    .footer-social
+        display: flex
+        justify-content: center
+        padding-bottom: 55px
+        a
+            color: #e8e8e8
+        a:not(:last-child)
+            margin-right: 25px
+        a:hover 
+            color: #5474fd
+
 
 
 .btn_click
@@ -280,9 +379,37 @@
     font-family: Aleo
     font-size: 16px
     font-weight: 400
-    font-style: normal
-    letter-spacing: normal
     line-height: 26px
     text-align: center
     text-transform: uppercase
     letter-spacing: 1.2px
+.btn_click:hover
+    cursor: pointer
+    color: #e9780f
+    background-color: #ffffff
+
+@media (max-width: 1200px)
+    .why-container
+        .why-wrap
+            display: flex
+            justify-content: space-around
+            .why-content
+                padding-top: 45px
+                h3
+                    padding-top: 45px
+            .why-foto
+                display: flex
+                &__img_1
+                    padding: 50px 0 10px 20px
+                &__img_2
+                    padding: 0 0 20px 20px
+
+    .what-container
+
+        .what-content
+            flex-wrap: wrap
+            justify-content: center
+            gap: 20px
+
+
+@media (max-width: 768px)
