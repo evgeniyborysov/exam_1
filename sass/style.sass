@@ -197,7 +197,6 @@
                 line-height: 26px
                 text-align: center
 
-
 .spain_1
     background-image: url("../img/spain1.jpg")
     background-position: center
@@ -415,10 +414,6 @@
     span
         background-color: transparent
 
-
-
-    
-
 .btn_click
     width: 225px
     height: 60px
@@ -460,12 +455,12 @@
             justify-content: center
             gap: 20px
 
-
 @media (max-width: 768px)
     body
-        overflow: hidden
+        // overflow: hidden
     .heder-content
         justify-content: center
+        padding: 15px 0 15px 0
         nav
             position: fixed
             right: -100%
@@ -496,10 +491,51 @@
                 display: flex
                 flex-direction: column
                 align-items: center
+                padding: 0
+                width: 65%
+                h3
+                    padding-top: 40px
+                    margin-bottom: 20px
+                p 
+                    text-align: center
+                    margin-bottom: 10px
             .why-foto
                 &__img_1,
                 &__img_2
                     padding: 10px 0 10px 0
+    .ssb
+        padding: 40px 0 35px 0
+        .ssb-wrap
+            &__item
+                h3
+                    font-size: 26px
+    .spain_1
+        .spain_1-wrap
+            padding: 100px 0 150px 0
+            justify-content: center
+    .spain_2
+        .spain_2-wrap
+            padding: 100px 0 150px 0
+            justify-content: center
+    .what
+        h3 
+            padding-top: 60px
+            margin-bottom: 50px
 
+@media (max-width: 576px)
+    .hero-content__form
+        display: flex
+        flex-wrap: wrap
+        gap: 15px
+    .why-wrap
+        .why-content
+            width: 75%
 
-@media (min-width: 576px)
+    .ssb
+        .ssb-wrap
+            flex-wrap: wrap
+            gap: 10px
+            &__item
+                h3
+                    font-size: 26px
+                
